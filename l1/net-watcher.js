@@ -17,7 +17,7 @@ const server = net.createServer(function (connection) {
   });
 
   // Cleanup
-  connection.on('clise', function () {
+  connection.on('close', function () {
     console.log('Subscriber disconnected.');
     watcher.close();
   });
