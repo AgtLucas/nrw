@@ -7,8 +7,8 @@ const zmq = require('zmq');
 if (cluster.isMaster) {
 
   // Master process - create ROUTER and DEALER sockets, bind endpoints
-  let router = zmq.socket.('router').bind('tcp://127.0.01:5433');
-  let dealer = zmq.socket.('dealer').bind('ipc://filer-dealer.ipc');
+  let router = zmq.socket('router').bind('tcp://127.0.01:5433');
+  let dealer = zmq.socket('dealer').bind('ipc://filer-dealer.ipc');
 
   // Forward messages betweeen router and dealer
   router.on('message', function () {
