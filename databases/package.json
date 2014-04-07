@@ -4,6 +4,7 @@
   "description": "Tools for creating an ebook database.",
   "author": "Lucas",
   "dependencies": {
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "cheerio": "^0.14.0"
   }
 }
