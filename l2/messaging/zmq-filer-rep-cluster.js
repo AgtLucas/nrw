@@ -22,7 +22,7 @@ if (cluster.isMaster) {
   });
 
   // Lister for workers to come online
-  cluster.on('online', function () {
+  cluster.on('online', function (worker) {
     console.log('Worker ' + worker.process.pid + ' is online.');
   });
 
