@@ -18,3 +18,8 @@ fs.watch(filename, function () {
   }));
 
 });
+
+// Listen on TCP port 5432
+publisher.bind('tcp://*:5432', function (err) {
+  console.log('Listening for zmq subscribers...');
+});
